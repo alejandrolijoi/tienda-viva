@@ -1,16 +1,15 @@
 
+import {Header } from "./components/Header/Header";
+import {Footer } from "./components/Footer/Footer";
+import {ItemListContainer} from "./components/ItemListContainer/ItemListContainer";
+
 function App() {
 
   return (
     <>
-     
-     <main>
-       <section>
-         <h1>Bienvenido a Nuestra Tienda</h1>
-         <p>Explora nuestros productos destacados.</p>
-       </section>
-     </main>
-     
+      <Header />
+      <ItemListContainer/>
+      <Footer />
     </>
   )
 }

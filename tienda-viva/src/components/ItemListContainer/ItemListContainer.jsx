@@ -1,9 +1,10 @@
+import "./ItemListContainer.css";
 
 export const ItemListContainer = () => {
     return (
-        <div>
-            <h2>Lista de Productos</h2>
-            <ItemList />
-        </div>
+    <section className="item-list-container">
+      <h2>Bienvenido a Nuestra Tienda</h2>
+      <p>Explora nuestros productos destacados.</p>
+    </section>
     );
 };

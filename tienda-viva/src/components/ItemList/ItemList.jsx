@@ -1,6 +1,8 @@
+import "./ItemList.css";
+
 export const ItemList = () => {
     return (
-        <div>
+        <div className="item-list">
             <h2>Lista de Productos</h2>
             <ul>
                 <li>Producto 1</li>
