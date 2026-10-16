@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "nombre": "Auriculares inalámbricos Over-Ear",
+    "precio": 45990,
+    "categoria": "audio",
+    "stock": 12,
+    "descripcion": "Sonido claro con batería de hasta 30 horas y conexión Bluetooth 5.0.",
+    "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=60"
+  },
+  {
+    "id": 2,
+    "nombre": "Mouse inalámbrico Logitech",
+    "precio": 18990,
+    "categoria": "perifericos",
+    "stock": 30,
+    "descripcion": "Mouse silencioso con sensor óptico y receptor USB incluido.",
+    "imagen": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&q=60"
+  },
+  {
+    "id": 3,
+    "nombre": "Mouse gamer de alto rendimiento",
+    "precio": 32990,
+    "categoria": "perifericos",
+    "stock": 8,
+    "descripcion": "Botones programables y sensor de alta precisión para juegos.",
+    "imagen": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&q=60"
+  },
+  {
+    "id": 4,
+    "nombre": "Auriculares con micrófono",
+    "precio": 15990,
+    "categoria": "audio",
+    "stock": 25,
+    "descripcion": "Auriculares con cable, ideales para videollamadas y home office.",
+    "imagen": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&q=60"
+  },
+  {
+    "id": 5,
+    "nombre": "Teclado mecánico compacto",
+    "precio": 38990,
+    "categoria": "perifericos",
+    "stock": 10,
+    "descripcion": "Diseño sin teclado numérico con switches mecánicos y luces RGB.",
+    "imagen": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=600&q=60"
+  },
+  {
+    "id": 6,
+    "nombre": "Teclado inalámbrico delgado",
+    "precio": 54990,
+    "categoria": "perifericos",
+    "stock": 6,
+    "descripcion": "Teclado ultradelgado con teclas de perfil bajo y batería de larga duración.",
+    "imagen": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=60"
+  },
+  {
+    "id": 7,
+    "nombre": "Parlante portátil a prueba de agua",
+    "precio": 39990,
+    "categoria": "audio",
+    "stock": 15,
+    "descripcion": "Sonido potente con graves profundos y resistencia al agua IPX7.",
+    "imagen": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=60"
+  },
+  {
+    "id": 8,
+    "nombre": "Notebook 14 pulgadas SSD 512GB",
+    "precio": 899900,
+    "categoria": "computacion",
+    "stock": 4,
+    "descripcion": "Procesador de última generación, 16GB de RAM y pantalla Full HD.",
+    "imagen": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=600&q=60"
+  },
+  {
+    "id": 9,
+    "nombre": "Tablet 10.9 pulgadas 64GB",
+    "precio": 349990,
+    "categoria": "computacion",
+    "stock": 7,
+    "descripcion": "Pantalla de alta resolución compatible con lápiz stylus.",
+    "imagen": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&q=60"
+  },
+  {
+    "id": 10,
+    "nombre": "Auriculares con cancelación de ruido",
+    "precio": 62990,
+    "categoria": "audio",
+    "stock": 9,
+    "descripcion": "Cancelación activa de ruido y modo transparencia para escuchar el entorno.",
+    "imagen": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&q=60"
+  }
+]
