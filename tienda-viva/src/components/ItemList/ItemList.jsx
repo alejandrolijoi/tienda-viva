@@ -1,14 +1,16 @@
+import { Item } from "../Item/Item";
 import "./ItemList.css";
 
-export const ItemList = () => {
-    return (
-        <div className="item-list">
-            <h2>Lista de Productos</h2>
-            <ul>
-                <li>Producto 1</li>
-                <li>Producto 2</li>
-                <li>Producto 3</li>
-            </ul>
-        </div>
-    );
+export const ItemList = ({ productos }) => {
+  if (productos.length === 0) {
+    return <p className="vacio">No hay productos en esta categoría.</p>;
+  }
+
+  return (
+    <div className="item-list">
+      {productos.map((producto) => (
+        <Item key={producto.id} producto={producto} />
+      ))}
+    </div>
+  );
 };
