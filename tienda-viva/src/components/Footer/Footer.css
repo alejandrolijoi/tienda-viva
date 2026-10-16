@@ -8,4 +8,20 @@
 
 .footer p {
   font-size: 14px;
+  margin-top: 15px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.redes a {
+  color: var(--bg);
+  font-size: 15px;
+}
+
+.redes a:hover {
+  color: var(--primary);
 }
