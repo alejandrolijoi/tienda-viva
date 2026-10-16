@@ -1,40 +1,23 @@
 .header {
-  background-color: #1e293b;
-  color: white;
+  background-color: var(--surface);
+  color: var(--text);
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .header h1 {
-  color: #38bdf8;
+  color: var(--primary);
   font-size: 28px;
-}
-
-.navbar {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.navbar a:hover {
-  color: #38bdf8;
 }
 
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
     gap: 15px;
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 15px 20px;
   }
 }

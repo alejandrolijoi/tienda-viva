@@ -1,17 +1,11 @@
 import "./Header.css";
-
+import { Nav } from "../Nav/Nav";
 
 export const Header = () => {
   return (
-    <header>
+    <header className="header">
       <h1>Tienda Viva</h1>
-      <nav>
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/productos">Productos</a></li>
-          <li><a href="/contacto">Contacto</a></li>
-        </ul>
-      </nav>
+      <Nav />
     </header>
   );
 };

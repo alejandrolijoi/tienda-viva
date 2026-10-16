@@ -1,23 +1,23 @@
 .item-list-container {
   min-height: 70vh;
-  padding: 40px 8%;
+  padding: 40px 0;
   text-align: center;
 }
 
 .item-list-container h2 {
-  color: #1e293b;
+  color: var(--text);
   font-size: 30px;
   margin-bottom: 15px;
 }
 
 .item-list-container p {
-  color: #64748b;
+  color: var(--text-secondary);
   font-size: 17px;
 }
 
 @media (max-width: 600px) {
   .item-list-container {
-    padding: 25px 15px;
+    padding: 25px 0;
   }
 
   .item-list-container h2 {

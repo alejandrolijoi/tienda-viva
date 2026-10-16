@@ -1,0 +1,21 @@
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: var(--text);
+  font-size: 16px;
+  transition: color 0.25s;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

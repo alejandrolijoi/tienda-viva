@@ -2,8 +2,25 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
-  padding: 30px 0;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
+}
+
+.item-list h2 {
+  grid-column: 1 / -1;
+  color: var(--text);
+  font-size: 26px;
+  text-align: center;
+}
+
+.item-list .cargando,
+.item-list .error {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-secondary);
+}
+
+.item-list .error {
+  color: var(--danger);
 }

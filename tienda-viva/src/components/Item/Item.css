@@ -1,10 +1,13 @@
 
 .item-container {
-  background-color: white;
-  border-radius: 12px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow);
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .item-container:hover {
@@ -15,6 +18,8 @@
   width: 100%;
   height: 200px;
   object-fit: contain;
+  border-radius: var(--radius);
+  background: var(--bg);
 }
 
 .item-container h3 {
@@ -23,22 +28,13 @@
 }
 
 .item-container .price {
-  color: #16a34a;
+  color: var(--success);
   font-size: 22px;
   font-weight: bold;
+  margin-top: auto;
 }
 
-.item-container button {
+.item-container .btn {
   width: 100%;
-  padding: 12px;
   margin-top: 15px;
-  border: none;
-  border-radius: 8px;
-  background-color: #2563eb;
-  color: white;
-  cursor: pointer;
-}
-
-.item-container button:hover {
-  background-color: #1d4ed8;
 }

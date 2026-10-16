@@ -1,13 +1,13 @@
-export const Nav = () => {
-  
+import "./Nav.css";
 
+export const Nav = () => {
   return (
-    <nav>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/productos">Productos</a></li>
-            <li><a href="/contacto">Contacto</a></li>
-        </ul>
+    <nav className="navbar">
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/productos">Productos</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
     </nav>
   );
 };
