@@ -7,8 +7,12 @@ export const ItemDetail = ({ producto }) => {
   const [cantidad, setCantidad] = useState(1);
   const { addToCart } = useCart();
 
+  // los productos dados de alta desde el panel pueden no tener stock
+  const stockDisponible = stock ?? Infinity;
+
   const restar = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
-  const sumar = () => setCantidad((prev) => (prev < stock ? prev + 1 : prev));
+  const sumar = () =>
+    setCantidad((prev) => (prev < stockDisponible ? prev + 1 : prev));
 
   const manejarAgregar = () => {
     addToCart({ ...producto, cantidad });
