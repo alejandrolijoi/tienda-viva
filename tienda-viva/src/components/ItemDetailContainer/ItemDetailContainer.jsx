@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { getProductById } from "../../services/productosService";
 
 export const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
@@ -10,20 +11,11 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     const obtenerProducto = async () => {
+      setCargando(true);
+      setError(null);
+
       try {
-        const respuesta = await fetch("/data/productos.json");
-
-        if (!respuesta.ok) {
-          throw new Error("No se pudo cargar el producto");
-        }
-
-        const datos = await respuesta.json();
-        const encontrado = datos.find((p) => p.id === Number(id));
-
-        if (!encontrado) {
-          throw new Error("Producto no encontrado");
-        }
-
+        const encontrado = await getProductById(id);
         setProducto(encontrado);
       } catch (e) {
         setError(e.message);

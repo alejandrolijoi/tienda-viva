@@ -2,7 +2,7 @@ import "./ItemListContainer.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemList } from "../ItemList/ItemList";
-import "./ItemListContainer.css";
+import { getProducts, getByCategory } from "../../services/productosService";
 
 export const ItemListContainer = ({ saludo }) => {
   const [productos, setProductos] = useState([]);
@@ -12,14 +12,14 @@ export const ItemListContainer = ({ saludo }) => {
 
   useEffect(() => {
     const obtenerProductos = async () => {
+      setCargando(true);
+      setError(null);
+
       try {
-        const respuesta = await fetch("/data/productos.json");
+        const datos = categoryId
+          ? await getByCategory(categoryId)
+          : await getProducts();
 
-        if (!respuesta.ok) {
-          throw new Error("No se pudieron obtener los productos");
-        }
-
-        const datos = await respuesta.json();
         setProductos(datos);
       } catch (e) {
         setError(e.message);
@@ -29,11 +29,7 @@ export const ItemListContainer = ({ saludo }) => {
     };
 
     obtenerProductos();
-  }, []);
-
-  const productosFiltrados = categoryId
-    ? productos.filter((producto) => producto.categoria === categoryId)
-    : productos;
+  }, [categoryId]);
 
   return (
     <section className="item-list-container">
@@ -42,7 +38,7 @@ export const ItemListContainer = ({ saludo }) => {
 
       {cargando && <p className="cargando">Cargando productos...</p>}
       {error && <p className="error">{error}</p>}
-      {!cargando && !error && <ItemList productos={productosFiltrados} />}
+      {!cargando && !error && <ItemList productos={productos} />}
     </section>
   );
-}
+};
