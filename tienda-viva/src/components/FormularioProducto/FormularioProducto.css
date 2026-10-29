@@ -1,0 +1,58 @@
+.formulario-producto {
+  width: min(600px, 100%);
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.formulario-producto h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.formulario-producto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 25px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.campo input,
+.campo textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font: inherit;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.formulario-producto .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
