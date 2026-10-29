@@ -6,18 +6,19 @@ import { getAuth } from "firebase/auth";
 // En un proyecto educativo dejamos la config directamente en el código.
 // En un proyecto real iría en variables de entorno con un archivo .env.
 const firebaseConfig = {
-  apiKey: "PEGAR_ACÁ",
-  authDomain: "PEGAR_ACÁ",
-  projectId: "PEGAR_ACÁ",
-  storageBucket: "PEGAR_ACÁ",
-  messagingSenderId: "PEGAR_ACÁ",
-  appId: "PEGAR_ACÁ",
+  apiKey: "AIzaSyCQMHk_Nco-Zb2y2LFs4TZB23eyhUrSyXQ",
+  authDomain: "tienda-viva-4f2c8.firebaseapp.com",
+  projectId: "tienda-viva-4f2c8",
+  storageBucket: "tienda-viva-4f2c8.firebasestorage.app",
+  messagingSenderId: "993820023216",
+  appId: "1:993820023216:web:7ddb81810315dc2c75de75",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const db = getFirestore(app);
+// La base se creó con el nombre "default", así que la pedimos explícitamente.
+const db = getFirestore(app, "default");
 
 //para el login
 const auth = getAuth(app);
