@@ -1,0 +1,29 @@
+.admin-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-nav-grupo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.admin-nav a {
+  font-weight: bold;
+}
+
+.admin-nav a:hover {
+  color: var(--primary);
+}
+
+.admin-nav .btn {
+  padding: 0.55rem 1.1rem;
+}
