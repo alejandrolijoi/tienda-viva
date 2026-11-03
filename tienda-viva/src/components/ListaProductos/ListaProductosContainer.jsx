@@ -3,7 +3,7 @@ import { ListaProductos } from "./ListaProductos";
 import { deleteProduct, getProducts } from "../../services/productosService";
 import "./ListaProductos.css";
 
-export const ListaProductosContainer = () => {
+export const ListaProductosContainer = ({ mostrarEncabezado = true }) => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState("");
@@ -46,6 +46,7 @@ export const ListaProductosContainer = () => {
     <ListaProductos
       productos={productos}
       error={error}
+      mostrarEncabezado={mostrarEncabezado}
       onEliminar={eliminarProducto}
     />
   );

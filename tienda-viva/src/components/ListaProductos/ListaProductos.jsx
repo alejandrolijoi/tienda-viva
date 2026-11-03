@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 
-export const ListaProductos = ({ productos, error, onEliminar }) => {
+export const ListaProductos = ({
+  productos,
+  error,
+  mostrarEncabezado,
+  onEliminar,
+}) => {
   return (
     <section className="lista-productos">
-      <header className="lista-header">
-        <h2>Productos</h2>
+      {mostrarEncabezado && (
+        <header className="lista-header">
+          <h2>Productos</h2>
 
-        <Link to="/admin/producto/nuevo" className="btn bg-primary">
-          Cargar producto
-        </Link>
-      </header>
+          <Link to="/admin/producto/nuevo" className="btn bg-primary">
+            Cargar producto
+          </Link>
+        </header>
+      )}
 
       {error && <p className="error">{error}</p>}
 

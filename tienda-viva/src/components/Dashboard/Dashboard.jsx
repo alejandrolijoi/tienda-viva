@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ListaProductosContainer } from "../ListaProductos/ListaProductosContainer";
 import "./Dashboard.css";
 
 export const Dashboard = () => {
@@ -24,6 +25,9 @@ export const Dashboard = () => {
         Desde este panel podés cargar, modificar y eliminar los productos de la
         tienda.
       </p>
+
+      <h3 className="dashboard-subtitulo">Productos cargados</h3>
+      <ListaProductosContainer mostrarEncabezado={false} />
     </section>
   );
 };
