@@ -4,6 +4,14 @@ import { useParams } from "react-router-dom";
 import { ItemList } from "../ItemList/ItemList";
 import { getProducts, getByCategory } from "../../services/productosService";
 
+// Para no mostrar el id crudo de la categoría en el título
+const nombresCategoria = {
+  audio: "Audio",
+  perifericos: "Periféricos",
+  computacion: "Computación",
+  disco: "Discos",
+};
+
 export const ItemListContainer = ({ saludo }) => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
@@ -33,7 +41,7 @@ export const ItemListContainer = ({ saludo }) => {
 
   return (
     <section className="item-list-container">
-      <h2>{categoryId || saludo}</h2>
+      <h2>{categoryId ? nombresCategoria[categoryId] || categoryId : saludo}</h2>
       <p>Explora nuestros productos destacados.</p>
 
       {cargando && <p className="cargando">Cargando productos...</p>}

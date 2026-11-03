@@ -9,6 +9,7 @@ export const Nav = () => {
         <li><Link to="/categoria/audio">Audio</Link></li>
         <li><Link to="/categoria/perifericos">Periféricos</Link></li>
         <li><Link to="/categoria/computacion">Computación</Link></li>
+        <li><Link to="/categoria/disco">Discos</Link></li>
       </ul>
     </nav>
   );
