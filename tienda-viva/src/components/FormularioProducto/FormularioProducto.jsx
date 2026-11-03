@@ -2,13 +2,14 @@ export const FormularioProducto = ({
   producto,
   errores,
   cargando,
+  editando,
   onCambio,
   onArchivo,
   onEnvio,
 }) => {
   return (
     <section className="formulario-producto">
-      <h2>Agregar nuevo producto</h2>
+      <h2>{editando ? "Editar producto" : "Agregar nuevo producto"}</h2>
 
       <form onSubmit={onEnvio}>
         <div className="campo">
@@ -46,6 +47,18 @@ export const FormularioProducto = ({
         </div>
 
         <div className="campo">
+          <label>Stock</label>
+          <input
+            type="number"
+            name="stock"
+            value={producto.stock}
+            onChange={onCambio}
+            min="0"
+          />
+          {errores.stock && <p className="error">{errores.stock}</p>}
+        </div>
+
+        <div className="campo">
           <label>Descripción</label>
           <textarea
             name="descripcion"
@@ -60,13 +73,22 @@ export const FormularioProducto = ({
         <div className="campo">
           <label>Imagen</label>
           <input type="file" accept="image/*" onChange={onArchivo} />
+          {editando && (
+            <p className="secondary">
+              Si no elegís un archivo, se mantiene la foto actual.
+            </p>
+          )}
           {errores.imagen && <p className="error">{errores.imagen}</p>}
         </div>
 
         {errores.general && <p className="error">{errores.general}</p>}
 
         <button type="submit" className="btn bg-primary" disabled={cargando}>
-          {cargando ? "Guardando..." : "Guardar producto"}
+          {cargando
+            ? "Guardando..."
+            : editando
+              ? "Guardar cambios"
+              : "Guardar producto"}
         </button>
       </form>
     </section>

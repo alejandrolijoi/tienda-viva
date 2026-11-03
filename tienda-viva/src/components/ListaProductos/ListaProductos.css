@@ -1,0 +1,56 @@
+.lista-productos {
+  padding: 20px 0;
+}
+
+.lista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.lista-header h2 {
+  font-size: 26px;
+}
+
+.tabla-productos {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.lista-productos table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.lista-productos th,
+.lista-productos td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.lista-productos th {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.lista-productos tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.lista-productos .acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.lista-productos .acciones .btn {
+  padding: 0.45rem 0.9rem;
+  font-size: 14px;
+}

@@ -42,15 +42,6 @@
   border-color: var(--primary);
 }
 
-.dashboard-card.deshabilitado {
-  color: var(--disabled);
-  cursor: not-allowed;
-}
-
-.dashboard-card.deshabilitado:hover {
-  border-color: var(--border);
-}
-
 @media (max-width: 600px) {
   .dashboard-header {
     flex-direction: column;

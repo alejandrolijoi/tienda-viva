@@ -7,6 +7,7 @@ import { CartView } from "./components/CartView/CartView";
 import { Login } from "./components/Login/Login";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Dashboard } from "./components/Dashboard/Dashboard";
+import { ListaProductosContainer } from "./components/ListaProductos/ListaProductosContainer";
 import { FormularioProductoContainer } from "./components/FormularioProducto/FormularioProductoContainer";
 import { ExitoProducto } from "./components/ExitoProducto/ExitoProducto";
 
@@ -45,7 +46,12 @@ function App() {
       >
         <Route index element={<Navigate to="dashboard" />} />
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="productos" element={<ListaProductosContainer />} />
         <Route path="producto/nuevo" element={<FormularioProductoContainer />} />
+        <Route
+          path="producto/:id/editar"
+          element={<FormularioProductoContainer />}
+        />
         <Route path="exito/:id" element={<ExitoProducto />} />
       </Route>
     </Routes>
