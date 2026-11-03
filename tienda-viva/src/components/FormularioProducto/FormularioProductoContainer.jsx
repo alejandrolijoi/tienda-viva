@@ -90,6 +90,9 @@ export const FormularioProductoContainer = () => {
 
       const datosProducto = {
         ...producto,
+        nombre: producto.nombre.trim(),
+        categoria: producto.categoria.trim(),
+        descripcion: producto.descripcion.trim(),
         precio: Number(producto.precio),
         stock: Number(producto.stock),
         imagen: urlImagen,

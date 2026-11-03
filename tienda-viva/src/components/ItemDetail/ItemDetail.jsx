@@ -9,6 +9,7 @@ export const ItemDetail = ({ producto }) => {
 
   // los productos dados de alta desde el panel pueden no tener stock
   const stockDisponible = stock ?? Infinity;
+  const sinStock = stockDisponible <= 0;
 
   const restar = () => setCantidad((prev) => (prev > 1 ? prev - 1 : 1));
   const sumar = () =>
@@ -29,14 +30,22 @@ export const ItemDetail = ({ producto }) => {
         <p className="descripcion">{descripcion}</p>
         <p className="price">${precio.toLocaleString("es-AR")}</p>
 
+        {stock !== undefined && stock !== null && (
+          <p className="secondary">Stock disponible: {stock}</p>
+        )}
+
         <div className="cantidad">
           <button onClick={restar}>−</button>
           <span>{cantidad}</span>
           <button onClick={sumar}>+</button>
         </div>
 
-        <button className="btn bg-primary" onClick={manejarAgregar}>
-          Agregar al carrito
+        <button
+          className="btn bg-primary"
+          onClick={manejarAgregar}
+          disabled={sinStock}
+        >
+          {sinStock ? "Sin stock" : "Agregar al carrito"}
         </button>
       </div>
     </article>

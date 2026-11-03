@@ -3,7 +3,7 @@ import { useCart } from "../../context/CartContext";
 import "./Checkout.css";
 
 export const Checkout = ({ onCompraTerminada }) => {
-  const { cartItems, getTotalPrice, clearCart } = useCart();
+  const { cartItems, clearCart } = useCart();
   const [datosForm, setDatosForm] = useState({
     nombre: "",
     email: "",

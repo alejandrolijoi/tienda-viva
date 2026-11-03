@@ -33,7 +33,7 @@ export const ListaProductos = ({ productos, error, onEliminar }) => {
                 <tr key={producto.id}>
                   <td>{producto.nombre}</td>
                   <td>{producto.categoria}</td>
-                  <td>${producto.precio.toLocaleString("es-AR")}</td>
+                  <td>${Number(producto.precio).toLocaleString("es-AR")}</td>
                   <td>{producto.stock ?? "-"}</td>
                   <td className="acciones">
                     <Link
