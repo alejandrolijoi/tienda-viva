@@ -28,6 +28,7 @@ export const FormularioProductoContainer = () => {
   const [errores, setErrores] = useState({});
   const [archivo, setArchivo] = useState(null);
   const [imagenActual, setImagenActual] = useState("");
+  const [vistaPrevia, setVistaPrevia] = useState("");
   const [producto, setProducto] = useState(formVacio);
 
   // Si viene un id en la url, es porque estamos editando
@@ -56,13 +57,23 @@ export const FormularioProductoContainer = () => {
     traerProducto();
   }, [id, editando]);
 
+  // liberamos la url de la vista previa cuando cambia o se cierra el formulario
+  useEffect(() => {
+    return () => {
+      if (vistaPrevia) URL.revokeObjectURL(vistaPrevia);
+    };
+  }, [vistaPrevia]);
+
   const manejarCambio = (e) => {
     const { name, value } = e.target;
     setProducto((prev) => ({ ...prev, [name]: value }));
   };
 
   const manejarArchivo = (e) => {
-    setArchivo(e.target.files[0] || null);
+    const nuevo = e.target.files[0] || null;
+
+    setArchivo(nuevo);
+    setVistaPrevia(nuevo ? URL.createObjectURL(nuevo) : "");
   };
 
   const manejarEnvio = async (e) => {
@@ -127,6 +138,8 @@ export const FormularioProductoContainer = () => {
       errores={errores}
       cargando={cargando}
       editando={editando}
+      imagenActual={imagenActual}
+      vistaPrevia={vistaPrevia}
       onCambio={manejarCambio}
       onArchivo={manejarArchivo}
       onEnvio={manejarEnvio}

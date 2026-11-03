@@ -52,6 +52,14 @@
   min-height: 90px;
 }
 
+.vista-previa {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
 .formulario-producto .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;

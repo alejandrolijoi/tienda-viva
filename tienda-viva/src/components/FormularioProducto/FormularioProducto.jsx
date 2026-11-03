@@ -3,6 +3,8 @@ export const FormularioProducto = ({
   errores,
   cargando,
   editando,
+  imagenActual,
+  vistaPrevia,
   onCambio,
   onArchivo,
   onEnvio,
@@ -72,6 +74,15 @@ export const FormularioProducto = ({
 
         <div className="campo">
           <label>Imagen</label>
+
+          {(vistaPrevia || imagenActual) && (
+            <img
+              className="vista-previa"
+              src={vistaPrevia || imagenActual}
+              alt="Foto del producto"
+            />
+          )}
+
           <input type="file" accept="image/*" onChange={onArchivo} />
           {editando && (
             <p className="secondary">
