@@ -24,12 +24,17 @@ export const Dashboard = () => {
         <Link to="/admin/producto/nuevo" className="dashboard-card">
           Cargar producto
         </Link>
-        <span className="dashboard-card deshabilitado">Modificar</span>
-        <span className="dashboard-card deshabilitado">Eliminar</span>
+        <Link to="/admin/productos" className="dashboard-card">
+          Modificar
+        </Link>
+        <Link to="/admin/productos" className="dashboard-card">
+          Eliminar
+        </Link>
       </div>
 
       <p className="secondary">
-        Desde este panel podés cargar los productos de la tienda.
+        Desde este panel podés cargar, modificar y eliminar los productos de la
+        tienda.
       </p>
     </section>
   );

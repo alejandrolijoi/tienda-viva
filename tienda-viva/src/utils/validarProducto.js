@@ -17,6 +17,10 @@ export const validarProducto = (producto) => {
     errores.categoria = "La categoría es obligatoria";
   }
 
+  if (producto.stock === "" || Number(producto.stock) < 0) {
+    errores.stock = "El stock no puede quedar vacío ni ser negativo";
+  }
+
   if (!producto.imagen) {
     errores.imagen = "Tenés que seleccionar una imagen";
   }
