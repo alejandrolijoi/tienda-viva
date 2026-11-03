@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "./Login.css";
 
 export const Login = () => {
-  const { login } = useAuth();
+  const { login, user } = useAuth();
   const navigate = useNavigate();
   const [datosForm, setDatosForm] = useState({
     email: "",
@@ -27,6 +27,9 @@ export const Login = () => {
       alert("Email o contraseña incorrectos");
     }
   };
+
+  // si ya hay sesión, no tiene sentido pedir el login de nuevo
+  if (user) return <Navigate to="/admin" replace />;
 
   return (
     <form className="login" onSubmit={manejarEnvio}>
