@@ -10,6 +10,7 @@ import { Dashboard } from "./components/Dashboard/Dashboard";
 import { ListaProductosContainer } from "./components/ListaProductos/ListaProductosContainer";
 import { FormularioProductoContainer } from "./components/FormularioProducto/FormularioProductoContainer";
 import { ExitoProducto } from "./components/ExitoProducto/ExitoProducto";
+import { NotFound } from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/cart" element={<CartView />} />
+
+        {/* si ninguna ruta coincide, muestra la 404 */}
+        <Route path="*" element={<NotFound />} />
       </Route>
 
       {/* el login va afuera del layout de admin para poder entrar sin sesión */}

@@ -1,0 +1,21 @@
+.not-found {
+  max-width: 500px;
+  margin: 40px auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  text-align: center;
+}
+
+.not-found h2 {
+  font-size: 48px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.not-found .btn {
+  display: inline-block;
+  margin-top: 20px;
+}
