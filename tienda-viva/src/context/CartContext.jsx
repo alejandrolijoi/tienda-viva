@@ -1,9 +1,25 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
 
+// leemos el carrito guardado en el navegador.
+// si no hay nada o está corrupto, arrancamos con el carrito vacío.
+const leerCarrito = () => {
+  try {
+    const guardado = localStorage.getItem("carrito");
+    return guardado ? JSON.parse(guardado) : [];
+  } catch {
+    return [];
+  }
+};
+
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(leerCarrito);
+
+  // guardamos el carrito para que no se pierda al recargar la página
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (item) => {
     setCartItems((prevItems) => {
