@@ -34,3 +34,16 @@
 .login .btn {
   margin-top: 5px;
 }
+
+/* botón secundario: vuelve a la tienda sin entrar al panel */
+.login-volver {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-align: center;
+}
+
+.login-volver:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}

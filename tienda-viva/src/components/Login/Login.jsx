@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "./Login.css";
 
@@ -56,6 +56,10 @@ export const Login = () => {
       <button type="submit" className="btn bg-primary">
         Ingresar
       </button>
+
+      <Link to="/" className="btn login-volver">
+        Ver tienda
+      </Link>
     </form>
   );
 };
