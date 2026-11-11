@@ -58,6 +58,11 @@
   font-size: 18px;
 }
 
+.item-detail .cantidad button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .item-detail .cantidad span {
   font-size: 18px;
   min-width: 30px;
